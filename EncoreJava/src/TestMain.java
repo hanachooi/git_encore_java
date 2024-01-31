@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.util.Scanner;
+
 import com.encore.test.StudentVO;
 
 public class TestMain {
@@ -9,6 +12,7 @@ public class TestMain {
 
 	public static void main(String[] args) {
 
+		/*
 		// 객체의 관계가 강하게 -> Composition (합성)
 		// 객체의 관계가 약하게 -> Aggregation (집합)
 		// 참조타입 
@@ -17,6 +21,20 @@ public class TestMain {
 		System.out.println(stuObj);
 		stuObj.setA("a");
 		System.out.println(stuObj.getA());
+		*/
+		/*
+		int inputData = 0;
+		try {
+			inputData = System.in.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Result >>> " + inputData);
+		*/
+		Scanner sc = new Scanner(System.in);
+		int a;
+		a = sc.nextInt();
 		
 	}
 	

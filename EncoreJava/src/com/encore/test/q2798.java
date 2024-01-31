@@ -1,38 +1,35 @@
 package com.encore.test;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.StringBufferInputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class q2798 {
-// N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램을 작성하시오.
+
 	public static void main(String[] args) throws IOException{
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		ArrayList<String> al = new ArrayList<String>();
-		// al.size가 아직 정해지지 않았기 때문에, 여기에 코드가 있으면 안된다.
-		//String[] s = new String[al.size()];
 		
+		String s = br.readLine();
+		StringTokenizer st = new StringTokenizer(s, " ");
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		StringBuilder sb = new StringBuilder();
 		
-		al.add("a");
-		al.add("b");
-		al.add("c");
-		
-		String[] s = new String[al.size()];
-		
-		for(int i=0; i < s.length; i++) {
-			s[i] = al.get(i);
-			System.out.println(s[i]);
+		for(int i = 0; i<N; i++) {
+			Printt(N,M, sb);
 		}
 		
-	
-		
 	}
-
+	// 클래스 자체에 속하는 메서드이기에, static을 사용해야함. 
+	public static void Printt(int N, int M, StringBuilder sb) {
+		for(int i=N; i<=M; i++) {
+			if(i!=M) {
+				sb.append(N).append(" ").append(i);
+				System.out.println(sb.toString());
+				sb.delete(0, 3);
+			}
+		}
+	}
 }
