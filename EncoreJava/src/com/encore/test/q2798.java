@@ -15,21 +15,22 @@ public class q2798 {
 		
 		int N = Integer.parseInt(br.readLine());
 		
-		// N = 5 -> 4.3.2.1.0 i->3
+		int[][] arr = new int[N][2];
+		String[] s;
 		
-		StringBuilder sb =  new StringBuilder();
-
 		for(int i=0; i<N; i++) {
-			for(int j = N-1; j>=0; j--) {
-				sb.append(" ");
-			}
-			for(int j = 1; j<2*i + 1; j++) {
-				sb.append("*");
-			}
-			sb.append("\n");
+			s = br.readLine().split(" ");
+			arr[i][0] = Integer.parseInt(s[0]);
+			arr[i][1] = Integer.parseInt(s[1]);
 		}
 		
-		System.out.println(sb.toString());
+		int m = 300;
+		
+		if(arr[0][0] )
 		
 	}
 }
+
+
+
+

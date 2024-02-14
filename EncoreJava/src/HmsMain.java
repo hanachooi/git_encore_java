@@ -1,6 +1,7 @@
 import com.encore.hms.service.HmsService;
 import com.encore.hms.service.HmsType;
 import com.encore.hms.service.HmsView;
+import com.encore.structure.HmsListView;
 
 public class HmsMain {
 
@@ -19,7 +20,13 @@ public class HmsMain {
 		System.out.println(msg);
 		*/
 		
+		/* 배열 이용
 		HmsView view = new HmsView(10);
+		view.mainMenu();
+		*/
+		
+		// ArrayList
+		HmsListView view = new HmsListView(10);
 		view.mainMenu();
 	}
 
