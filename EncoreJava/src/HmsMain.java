@@ -25,7 +25,7 @@ public class HmsMain {
 		view.mainMenu();
 		*/
 		
-		// ArrayList
+		// ArrayList 이용 
 		HmsListView view = new HmsListView(10);
 		view.mainMenu();
 	}
