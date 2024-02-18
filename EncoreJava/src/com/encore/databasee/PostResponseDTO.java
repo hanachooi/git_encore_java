@@ -16,5 +16,11 @@ public class PostResponseDTO {
 	private String content;
 	private String writer;
 	
+	 @Override
+	    public String toString() {
+	        return "idx= " + idx + 
+	                " title= " + title + 
+	                " content= " + content + " writer = " + writer;
+	    }
 	
 }

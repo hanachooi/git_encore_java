@@ -13,11 +13,20 @@ public class SelectController {
 		service = new EncoreServiceImpl();
 	}
 	
+	// 컨트롤러에서는 서비스 계층으로 접근을 해야함. 
 	public List<String> selectAll() {
+		System.out.println(">>> 컨트롤러 출력 << ");
+		List<String> list = null;
 		
-		service.
-		
-		return null;
+		try {
+			list = service.findAll();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+
+		return list;
 	}
+
+
 	
 }

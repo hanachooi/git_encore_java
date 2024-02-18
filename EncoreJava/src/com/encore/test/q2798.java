@@ -1,35 +1,63 @@
 package com.encore.test;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
 public class q2798 {
 
-	public static void main(String[] args) throws IOException{
-
+	public static void main(String[] args) throws IOException{ 
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
 		int N = Integer.parseInt(br.readLine());
-		// int 형으로 받아야함. String 은 누적하는게 아니기 때문. 
-		int g = N;
+
+		int a = 1;		// 분자
+		int b = 2;		// 분모
 		
-		for(int i = 0; i<N; i++) {
-			String s = br.readLine();
-			boolean[] visited = new boolean[26];
-			visited[s.charAt(0)-'a'] = true;
-			for(int j = 1; j<s.length(); j++) {
-				if(visited[s.charAt(j) - 'a']) {
-					if( s.charAt(j-1) != s.charAt(j) ) {
-						g--;
-						break;
+		if(N == 1) {
+			System.out.println(1);
+		}else if(N == 2) {
+			System.out.println(a + "/" + b);
+		}else {
+		
+			for(int i = 2; i<N; i++) {
+			
+				if(a == 1) {
+					if((a+b)%2 == 0) {
+						b++;
+						continue;
+					}
+					if((a+b) % 2 != 0) {
+						a++;
+						b--;
+						continue;
+					}
+							
+				}else if(b == 1) {
+					if((a+b) % 2 != 0) {
+						a++;
+						continue;
+					}else{
+						a--;
+						b++;
+
+						continue;
+					}
+				}else {
+					if((a+b) % 2 == 0 ) {
+						a--;
+						b++;
+					}else {
+						a++;
+						b--;
 					}
 				}
-				visited[s.charAt(j)-'a'] = true;
+				
 			}
+			
+			System.out.println(a + "/" + b);
 		}
-		System.out.println(g);
+		
+		
 	}
 }
 

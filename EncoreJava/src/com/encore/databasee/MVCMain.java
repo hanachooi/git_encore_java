@@ -23,19 +23,24 @@ public class MVCMain {
 		int flag = insert.execute(params);
 		*/
 		
-		/*
+		
 		Map<String ,String> map = new HashMap<String, String>();
 		map.put("title", "불금");
 		map.put("content", "간소해야함");
 		map.put("writer", "섭섭해");
 		int flag = insert.execute(map);
 		System.out.println(">>>> insert Result : " + flag);
-		*/
+		
 		
 		System.out.println(">>> 전체 출력 <<<");
 		SelectController select = new SelectController();
 		//List<PostResponseDTO> list = select.execute();
 		// 출력 
+		List<String> selectAll = select.selectAll();
+		
+		for(String s : selectAll) {
+			System.out.println(s);
+		}
 		
 	}
 

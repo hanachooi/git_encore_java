@@ -1,5 +1,6 @@
 package com.encore.databasee;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -27,13 +28,17 @@ public class EncoreServiceImpl {
 		return flag;
 	}
 	
+	// 출력을 해야 하므로, String의 값으로 출력을 해야 함. 
 	public List<String> findAll(){
 		System.out.println("서비스 전체 출력");
 		List<PostResponseDTO> flag = dao.selectRow();
+		List<String> list = new ArrayList<String>();
+
+		for(PostResponseDTO d : flag) {
+			list.add(d.toString());
+		}
 		
-		List<String> l;
-		for(List<String> ll : f)
-		
+		return list;
 	}
 	
 }

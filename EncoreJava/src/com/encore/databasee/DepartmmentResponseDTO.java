@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+// 응답은 DTO 에서 가져와야 함. 
 // DTO(instance) == Table(record)
 @NoArgsConstructor
 @AllArgsConstructor
