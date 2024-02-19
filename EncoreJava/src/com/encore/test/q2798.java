@@ -14,7 +14,7 @@ public class q2798 {
 		int b = 2;		// 분모
 		
 		if(N == 1) {
-			System.out.println(1);
+			System.out.println("1/1");
 		}else if(N == 2) {
 			System.out.println(a + "/" + b);
 		}else {

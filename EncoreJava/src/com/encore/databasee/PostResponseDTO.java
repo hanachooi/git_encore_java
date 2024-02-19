@@ -11,6 +11,7 @@ import lombok.Setter;
 @Setter
 public class PostResponseDTO {
 
+	// 가지고 올 디비의 컬럼들을 정의
 	private int idx;
 	private String title;
 	private String content;
