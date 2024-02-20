@@ -125,7 +125,7 @@ public class EncoreDao {
 			// 사용할 쿼리 설정
 			pstmt = conn.prepareStatement(query);
 			// 쿼리의 실행 결과를 저장
-			// 쿼리의 실행결과. 저장. 
+			// 쿼리의 실행결과를 rs 라는 가상의 테이블에 저장. 
 			rs = pstmt.executeQuery();
 			
 			// 쿼리 실행 결과가 존재하지 않을 때까지, 위에서 생성한, 객체 리스트에 담기. 

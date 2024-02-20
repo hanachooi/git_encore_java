@@ -29,7 +29,7 @@ public class GrapServiceImpl {
 	// 재귀호출 필요하고
 	// Iterator 로 하기. 
 	public void dfs(GraphNode node) {
-		System.out.println(node.getData());
+		/*System.out.println(node.getData());
 		node.setVisited(true);
 		
 		Iterator<GraphNode> iter = node.getCorLst().iterator();
@@ -42,10 +42,24 @@ public class GrapServiceImpl {
 				dfs(data);
 			}
 		}
+		
+		*/
+		System.out.println(node.getData());
+		node.setVisited(true);
+		
+		Iterator<GraphNode> iter = node.getCorLst().iterator();
+		while(iter.hasNext()) {
+			GraphNode data = iter.next();
+			if(!data.isVisited()) {
+				dfs(data);
+			}
+		}
 	}
 	
+	// 큐를 이용해서 작성
 	public void bfs(int[][] ary, boolean[] visit) {
 		Queue<Integer> queue = new LinkedList<Integer>();
+		// Linked를 ArrayList로 바꾸기 
 		
 		// 데이터이면서 2차원 배열의 행 인덱스
 		queue.offer(1);

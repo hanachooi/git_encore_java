@@ -9,6 +9,7 @@ public class GrapMain {
 		
 		GrapServiceImpl service = new GrapServiceImpl();
 		
+		
 		GraphNode node1 = service.makeNode(1);
 		GraphNode node2 = service.makeNode(2);
 		GraphNode node3 = service.makeNode(3);
@@ -25,15 +26,18 @@ public class GrapMain {
 		service.makeEdge(node3, node6);
 		service.makeEdge(node4, node1);
 		
+		
 		// DFS 탐색
 		System.out.println("dfs");
 		service.dfs(node1);
 		System.out.println();
 		System.out.println();
 		
+		
 		// BFS 탐색
 		// 생성한(1~8) 노드의 연결
 		// 1. 배열, 2. GraphNode
+		
 		System.out.println("bfs");
 		System.out.println(">>> array version");
 		int[][] ary = {{}, {2,3,7}, {1, 3, 5}, {1,2}, {6,8}, {2}, {4, 7, 8}, {1,6}, {6,4}};
